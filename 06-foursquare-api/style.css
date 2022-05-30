@@ -1,3 +1,46 @@
 #map {
     height: 100vh;
 }
+
+#map-container {
+    /* we want to set the #search-container to be
+       position absolute and be relative to be map-container */
+    position: relative;
+}
+
+#search-container {
+    position: absolute;
+    z-index: 314159;
+    top: 30px;
+    left: 45px;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: none;
+}
+
+#search-results {
+    overflow-y:scroll;
+    max-height: 300px;
+}
+
+#toggleSearchBtn {
+    position: absolute;
+    z-index: 314159; /* so that it will show on top of the map */
+    left: 50px;
+    top: 10px;
+}
+
+.search-result {
+    cursor: pointer;
+}
+
+@media(min-width: 767px) {
+    #search-container {
+        display: block;
+        top: 10px;
+    }
+
+    #toggleSearchBtn {
+        display: none;
+    }
+}
